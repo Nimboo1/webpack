@@ -1,7 +1,7 @@
 import React from "react";
 import "./styles.css";
-import logo1 from "./images/rosatom-svg.svg";
-import logo2 from "./images/rosatom-jpg.jpg";
+import logo1 from "@Images/rosatom-svg.svg";
+import logo2 from "@Images/rosatom-jpg.jpg";
 
 const App = (): JSX.Element => {
   return (
@@ -12,6 +12,7 @@ const App = (): JSX.Element => {
       {process.env.NODE_ENV == "production" && "We are in prod environment"}
       <img src={logo1} alt='' />
       <img src={logo2} alt='' />
+      <img src={"/circle.png"} alt='mountains' />
     </>
   );
 };

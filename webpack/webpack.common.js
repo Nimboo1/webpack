@@ -1,10 +1,16 @@
 const path = require("path");
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: path.resolve(__dirname, "..", "./src/index.tsx"),
-  resolve: { extensions: [".tsx", ".ts", ".js"] },
+  resolve: {
+    extensions: [".tsx", ".ts", ".js"],
+    alias: {
+      "@Images": path.resolve(__dirname, "..", "./src/images"),
+    },
+  },
   module: {
     rules: [
       {
@@ -35,5 +41,8 @@ module.exports = {
       template: path.resolve(__dirname, "..", "./src/index.html"),
     }),
     new webpack.HotModuleReplacementPlugin(),
+    new CopyPlugin({
+      patterns: [{ from: "./public", to: "." }],
+    }),
   ],
 };
