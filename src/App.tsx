@@ -1,0 +1,18 @@
+import React from "react";
+import "./styles.css";
+import logo1 from "./images/rosatom-svg.svg";
+import logo2 from "./images/rosatom-jpg.jpg";
+
+const App = (): JSX.Element => {
+  return (
+    <>
+      <h1>React TypeScript Webpack project</h1>
+      {process.env.NODE_ENV}
+      {process.env.NODE_ENV == "development" && "We are in dev environment"}
+      {process.env.NODE_ENV == "production" && "We are in prod environment"}
+      <img src={logo1} alt='' />
+      <img src={logo2} alt='' />
+    </>
+  );
+};
+export { App };
