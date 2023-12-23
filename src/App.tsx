@@ -10,6 +10,7 @@ const App = (): JSX.Element => {
       {process.env.NODE_ENV}
       {process.env.NODE_ENV == "development" && "We are in dev environment"}
       {process.env.NODE_ENV == "production" && "We are in prod environment"}
+      {process.env.BASE_URL}
       <img src={logo1} alt='' />
       <img src={logo2} alt='' />
       <img src={"/circle.png"} alt='mountains' />
