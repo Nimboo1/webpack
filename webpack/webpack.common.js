@@ -11,6 +11,7 @@ module.exports = {
     alias: {
       "@Images": path.resolve(__dirname, "..", "./src/images"),
     },
+    roots: [path.resolve("./src")],
   },
   module: {
     rules: [
