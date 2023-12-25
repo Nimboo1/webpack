@@ -8,6 +8,7 @@ module.exports = {
   entry: path.resolve(__dirname, "..", "./src/index.tsx"),
   resolve: {
     extensions: [".tsx", ".ts", ".js"],
+    modules: ["src", "node_modules"],
     alias: {
       "@Images": path.resolve(__dirname, "..", "./src/images"),
     },

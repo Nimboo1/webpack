@@ -1,7 +1,7 @@
 import React from "react";
 import "./styles.css";
 import logo1 from "@Images/rosatom-svg.svg";
-import logo2 from "@Images/rosatom-jpg.jpg";
+import logo2 from "images/rosatom-jpg.jpg";
 
 const App = (): JSX.Element => {
   return (
